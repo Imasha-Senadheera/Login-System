@@ -17,6 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($num > 0) {
             //echo " Login successfull!";
             $login = 1;
+            session_start();
+            $_SESSION['UserName']=$username;
+            header('location:home.php');
 
         }else{
             //echo " Invalid data!";
