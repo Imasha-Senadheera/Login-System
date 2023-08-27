@@ -24,8 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result = mysqli_query($con, $sql);
 
             if ($result) {
-                //echo " Signup successful!!";
+                //echo " Signup successful!";
                 $success=1;
+               //header('location:login.php');
 
             } else {
                 die(mysqli_error($con));
